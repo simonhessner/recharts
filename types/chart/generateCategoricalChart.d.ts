@@ -77,6 +77,12 @@ declare const generateCategoricalChart: ({ chartName, GraphicalChild, eventType,
         getAxisMapByAxes: (props: CategoricalChartProps, { axes, graphicalItems, axisType, axisIdKey, stackGroups, dataStartIndex, dataEndIndex }: any) => any;
         getAxisMapByItems: (props: CategoricalChartProps, { graphicalItems, Axis, axisType, axisIdKey, stackGroups, dataStartIndex, dataEndIndex }: any) => any;
         getActiveCoordinate(tooltipTicks: TickItem[], activeIndex: any, rangeObj: any): ChartCoordinate;
+        getTooltipData(rangeObj?: any): {
+            activeTooltipIndex: number;
+            activeLabel: any;
+            activePayload: any[];
+            activeCoordinate: ChartCoordinate;
+        };
         getMouseInfo(event: any): {
             xValue: any;
             yValue: any;
@@ -145,7 +151,7 @@ declare const generateCategoricalChart: ({ chartName, GraphicalChild, eventType,
         renderClipPath(): JSX.Element;
         render(): JSX.Element;
         context: any;
-        setState<K extends "offset" | "dataStartIndex" | "updateId" | "graphicalItems" | "dataEndIndex" | "xAxisMap" | "chartX" | "chartY" | "activeTooltipIndex" | "isTooltipActive" | "yAxisMap" | "orderedTooltipTicks" | "tooltipAxis" | "tooltipTicks" | "activeCoordinate" | "angleAxisMap" | "radiusAxisMap" | "formatedGraphicalItems" | "activePayload" | "tooltipAxisBandSize" | "activeItem" | "activeLabel" | "xValue" | "yValue">(state: CategoricalChartState | ((prevState: Readonly<CategoricalChartState>, props: Readonly<CategoricalChartProps>) => CategoricalChartState | Pick<CategoricalChartState, K>) | Pick<CategoricalChartState, K>, callback?: () => void): void;
+        setState<K extends "offset" | "dataStartIndex" | "updateId" | "graphicalItems" | "dataEndIndex" | "tooltipTicks" | "chartX" | "chartY" | "activeTooltipIndex" | "isTooltipActive" | "xAxisMap" | "yAxisMap" | "orderedTooltipTicks" | "tooltipAxis" | "activeCoordinate" | "angleAxisMap" | "radiusAxisMap" | "formatedGraphicalItems" | "activePayload" | "tooltipAxisBandSize" | "activeItem" | "activeLabel" | "xValue" | "yValue">(state: CategoricalChartState | ((prevState: Readonly<CategoricalChartState>, props: Readonly<CategoricalChartProps>) => CategoricalChartState | Pick<CategoricalChartState, K>) | Pick<CategoricalChartState, K>, callback?: () => void): void;
         forceUpdate(callback?: () => void): void;
         readonly props: Readonly<CategoricalChartProps> & Readonly<{
             children?: React.ReactNode;

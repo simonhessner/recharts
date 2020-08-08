@@ -13,6 +13,12 @@ declare const _default: {
         getAxisMapByAxes: (props: import("./generateCategoricalChart").CategoricalChartProps, { axes, graphicalItems, axisType, axisIdKey, stackGroups, dataStartIndex, dataEndIndex }: any) => any;
         getAxisMapByItems: (props: import("./generateCategoricalChart").CategoricalChartProps, { graphicalItems, Axis, axisType, axisIdKey, stackGroups, dataStartIndex, dataEndIndex }: any) => any;
         getActiveCoordinate(tooltipTicks: import("../util/types").TickItem[], activeIndex: any, rangeObj: any): import("../util/types").ChartCoordinate;
+        getTooltipData(rangeObj?: any): {
+            activeTooltipIndex: number;
+            activeLabel: any;
+            activePayload: any[];
+            activeCoordinate: import("../util/types").ChartCoordinate;
+        };
         getMouseInfo(event: any): {
             xValue: any;
             yValue: any;
@@ -81,7 +87,7 @@ declare const _default: {
         renderClipPath(): JSX.Element;
         render(): JSX.Element;
         context: any;
-        setState<K extends "offset" | "dataStartIndex" | "updateId" | "graphicalItems" | "dataEndIndex" | "xAxisMap" | "chartX" | "chartY" | "activeTooltipIndex" | "isTooltipActive" | "yAxisMap" | "orderedTooltipTicks" | "tooltipAxis" | "tooltipTicks" | "activeCoordinate" | "angleAxisMap" | "radiusAxisMap" | "formatedGraphicalItems" | "activePayload" | "tooltipAxisBandSize" | "activeItem" | "activeLabel" | "xValue" | "yValue">(state: import("./generateCategoricalChart").CategoricalChartState | ((prevState: Readonly<import("./generateCategoricalChart").CategoricalChartState>, props: Readonly<import("./generateCategoricalChart").CategoricalChartProps>) => import("./generateCategoricalChart").CategoricalChartState | Pick<import("./generateCategoricalChart").CategoricalChartState, K>) | Pick<import("./generateCategoricalChart").CategoricalChartState, K>, callback?: () => void): void;
+        setState<K extends "offset" | "dataStartIndex" | "updateId" | "graphicalItems" | "dataEndIndex" | "tooltipTicks" | "chartX" | "chartY" | "activeTooltipIndex" | "isTooltipActive" | "xAxisMap" | "yAxisMap" | "orderedTooltipTicks" | "tooltipAxis" | "activeCoordinate" | "angleAxisMap" | "radiusAxisMap" | "formatedGraphicalItems" | "activePayload" | "tooltipAxisBandSize" | "activeItem" | "activeLabel" | "xValue" | "yValue">(state: import("./generateCategoricalChart").CategoricalChartState | ((prevState: Readonly<import("./generateCategoricalChart").CategoricalChartState>, props: Readonly<import("./generateCategoricalChart").CategoricalChartProps>) => import("./generateCategoricalChart").CategoricalChartState | Pick<import("./generateCategoricalChart").CategoricalChartState, K>) | Pick<import("./generateCategoricalChart").CategoricalChartState, K>, callback?: () => void): void;
         forceUpdate(callback?: () => void): void;
         readonly props: Readonly<import("./generateCategoricalChart").CategoricalChartProps> & Readonly<{
             children?: import("react").ReactNode;
