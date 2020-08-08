@@ -38,6 +38,6 @@ declare namespace Label {
         offset: number;
     };
     var parseViewBox: (props: any) => any;
-    var renderCallByParent: (parentProps: any, viewBox?: ViewBox, ckeckPropsLabel?: boolean) => JSX.Element[];
+    var renderCallByParent: (parentProps: any, viewBox?: ViewBox, checkPropsLabel?: boolean) => JSX.Element[];
 }
 export default Label;

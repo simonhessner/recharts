@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PresentationAttributes, BaseAxisProps, TickItem } from '../util/types';
-interface PolarAngleAxisProps extends BaseAxisProps {
+export interface PolarAngleAxisProps extends BaseAxisProps {
     angleAxisId?: string | number;
     cx?: number;
     cy?: number;

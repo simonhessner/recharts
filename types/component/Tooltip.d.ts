@@ -1,10 +1,10 @@
 import { PureComponent, CSSProperties, ReactNode, ReactElement, ReactText } from 'react';
 import { ValueType, NameType, Payload, Props as DefaultProps } from './DefaultTooltipContent';
 import { AnimationTiming } from '../util/types';
-export declare type ContentType<TValue extends ValueType, TName extends NameType> = ReactElement | ((props: Props<TValue, TName>) => ReactNode);
+export declare type ContentType<TValue extends ValueType, TName extends NameType> = ReactElement | ((props: TooltipProps<TValue, TName>) => ReactNode);
 declare type UniqueFunc<TValue extends ValueType, TName extends NameType> = (entry: Payload<TValue, TName>) => unknown;
 declare type UniqueOption<TValue extends ValueType, TName extends NameType> = boolean | UniqueFunc<TValue, TName>;
-declare type Props<TValue extends ValueType, TName extends NameType> = DefaultProps<TValue, TName> & {
+export declare type TooltipProps<TValue extends ValueType, TName extends NameType> = DefaultProps<TValue, TName> & {
     allowEscapeViewBox?: {
         x?: boolean;
         y?: boolean;
@@ -39,7 +39,7 @@ declare type Props<TValue extends ValueType, TName extends NameType> = DefaultPr
     filterNull?: boolean;
     useTranslate3d?: boolean;
 };
-declare class Tooltip<TValue extends ValueType, TName extends NameType> extends PureComponent<Props<TValue, TName>> {
+declare class Tooltip<TValue extends ValueType, TName extends NameType> extends PureComponent<TooltipProps<TValue, TName>> {
     static displayName: string;
     static defaultProps: {
         active: boolean;
